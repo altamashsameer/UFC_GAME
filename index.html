@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UFC Gauntlet</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div id="game-container">
+        <section id="ali-room" class="room active">
+            <div class="dialogue-box">
+                <h1>ALI ABDELAZIZ</h1>
+                <p>"Go see the coaches, kid. Don't waste my time."</p>
+                <button onclick="showTrevor()">Enter Gym</button>
+            </div>
+        </section>
+
+        <section id="trevor-room" class="room">
+            <h2>TREVOR WITTMAN</h2>
+            <p></p>
+            <div class="options"></div>
+        </section>
+
+        <section id="javier-room" class="room">
+            <h2>JAVIER MENDEZ</h2>
+            <p></p>
+            <div class="options"></div>
+        </section>
+
+        <section id="eugene-room" class="room">
+            <h2>EUGENE BAREMAN</h2>
+            <p></p>
+            <div class="options"></div>
+        </section>
+
+        <section id="decision-room" class="room">
+            <div class="decision-layout">
+                <h2>THE CROSSROADS</h2>
+                <p>Training complete. Where to now?</p>
+                <button class="dana-btn" onclick="goToDana()">DANA WHITE'S OFFICE</button>
+                <button class="back-corner-btn" onclick="goToAliSecret()">Back</button>
+            </div>
+        </section>
+
+        <section id="ali-secret-room" class="room">
+            <h2>ALI ABDELAZIZ</h2>
+            <p>"I see the coaches like you. But let's talk business..."</p>
+            <div class="options">
+                <button onclick="setSecret('legacy')">LEGACY</button>
+                <button onclick="setSecret('money')">MONEY</button>
+            </div>
+        </section>
+
+        <section id="cage-room" class="room">
+            <div id="timer">4.50</div>
+            <div id="target-grid" class="grid-3x3"></div>
+        </section>
+
+        <section id="result-room" class="room">
+            <div id="result-display">
+                <div id="rarity-text"></div>
+                <h1 id="fighter-name"></h1>
+                <p id="score-text"></p>
+                <button class="retry-btn" onclick="location.reload()">RETRY GAME</button>
+                <br>
+                <a href="#" onclick="startNerdQuiz()" class="quiz-link">Think you're a real UFC Nerd? Take the Quiz &rarr;</a>
+            </div>
+        </section>
+
+        <section id="quiz-room" class="room">
+            <h2 id="quiz-question-num"></h2>
+            <p id="quiz-question-text"></p>
+            <div id="quiz-options" class="options"></div>
+        </section>
+
+        <section id="quiz-result-room" class="room">
+            <h1 id="nerd-status"></h1>
+            <p id="nerd-score-text"></p>
+            <button onclick="location.reload()">Back to Coach Game</button>
+        </section>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
